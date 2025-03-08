@@ -12,7 +12,6 @@ let save = document.querySelector('.save')
 let current_clr = '#000'
 let is_eraser = false
 let is_drawing = false
-let cell_size = 30
 
 start_btn.addEventListener('click', function() {
     start_btn.style.display='none'
@@ -33,3 +32,12 @@ function create_grid() {
         board.appendChild(cells)
     }
 }
+
+input_color.addEventListener('click', function(){
+    current_clr = input_color.value
+    is_eraser = false
+})
+brush.addEventListener('click', function(){
+    is_eraser = false
+    
+})
