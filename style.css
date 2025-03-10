@@ -190,3 +190,8 @@ footer {
 .footer-text {
   position:fixed;
 }
+.btn:hover {
+  transform:scale(1.05);
+  cursor: pointer;
+  transition: transform 1s;
+}
