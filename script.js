@@ -41,6 +41,13 @@ function create_grid() {
         }
     })
     }
+    let saved_img = JSON.parse(localStorage.getItem('saved_img'))
+    if (saved_img) {
+        let cells = document.querySelectorAll('.cell')
+        cells.forEach((cell, index)=>{
+            cell.style.backgroundColor=saved_img[index]
+        })
+    }
 }
 
 input_color.addEventListener('click', function(){
@@ -78,4 +85,12 @@ bucket.addEventListener('click', function(){
         easing: 'linear',
 
     })
+})
+save.addEventListener('click', function(){
+    let cell_clr = []
+    let cells = document.querySelectorAll('.cell')
+    cells.forEach(cell => {
+        cell_clr.push(cell.style.backgroundColor)
+    })
+    localStorage.setItem('saved_img', JSON.stringify(cell_clr))
 })
