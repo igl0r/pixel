@@ -132,10 +132,19 @@ main {
 
   #board {
     display:none;
-    border: 1px solid black;
+    /* border: 1px solid black;
     width: 50vw;
-    height: 85%
+    height: 85% */
+    grid-template-columns: repeat(30, 30px);
+    grid-template-rows: repeat(20, 30px);
 
+  }
+
+  .cell {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ffffffa1;
+    background-color:#212121 ;
   }
 
   .controls {
