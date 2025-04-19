@@ -190,3 +190,54 @@ footer {
 .footer-text {
   position:fixed;
 }
+.btn:hover {
+  transform:scale(1.05);
+  cursor: pointer;
+  transition: transform 1s;
+}
+
+/* Адаптивная вёрстка */
+@media (max-width:769px){
+  body{
+    width: 100vw;
+    height:100vh;
+    box-sizing: border-box;
+  }
+  header{
+    height: 10vh;
+    font-size: 20px;
+  }
+  main{
+    height: 80vh;
+    width:100%;
+    flex-direction: column;
+  }
+  footer{
+    height:10vh;
+  }
+  #board {
+    display:none;
+    /* border: 1px solid black;
+    width: 50vw;
+    height: 85% */
+    grid-template-columns: repeat(30, 15px);
+    grid-template-rows: repeat(20, 15px);
+
+  }
+
+  .cell {
+    width: 15px;
+    height: 15px;
+    border: 0.5px solid #ffffffa1;
+    background-color:#212121 ;
+  }
+
+  .controls {
+    font-size: 18px;
+    gap:20px;
+    flex-direction: row;
+    padding:25px;
+    justify-content: space-around;
+    width: 80%;
+  }
+}
