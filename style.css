@@ -181,10 +181,9 @@ footer {
 
 .contacts {
     display: flex;
-    justify-content: left;
+    justify-content: center;
     align-items: center;
     gap: 25px;
-    padding-left: 1700px;
 }
 
 .footer-text {
@@ -198,11 +197,6 @@ footer {
 
 /* Адаптивная вёрстка */
 @media (max-width:769px){
-  body{
-    width: 100vw;
-    height:100vh;
-    box-sizing: border-box;
-  }
   header{
     height: 10vh;
     font-size: 20px;
@@ -220,24 +214,23 @@ footer {
     /* border: 1px solid black;
     width: 50vw;
     height: 85% */
-    grid-template-columns: repeat(30, 15px);
-    grid-template-rows: repeat(20, 15px);
+    grid-template-columns: repeat(30, 12px);
+    grid-template-rows: repeat(20, 12px);
 
   }
 
   .cell {
-    width: 15px;
-    height: 15px;
+    width: 12px;
+    height: 12px;
     border: 0.5px solid #ffffffa1;
     background-color:#212121 ;
   }
 
   .controls {
     font-size: 18px;
-    gap:20px;
+    gap:30px;
     flex-direction: row;
     padding:25px;
-    justify-content: space-around;
-    width: 80%;
+    justify-content: center;
   }
 }
